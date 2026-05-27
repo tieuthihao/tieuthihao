@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nhật Phong x GPT - TELC B1 PDF + Answer Key</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Nhật Phong x GPT</h1>
+      <p>TELC B1 — đọc PDF gốc + tự nhập Answer Key</p>
+    </div>
+    <button id="themeBtn">🌙</button>
+  </header>
+
+  <main class="app">
+    <aside class="sidebar">
+      <input id="searchInput" placeholder="Tìm bộ đề..." />
+      <div id="setList"></div>
+
+      <div class="toolbox">
+        <button id="exportBtn">Export key JSON</button>
+        <label class="importBtn">
+          Import key JSON
+          <input id="importInput" type="file" accept=".json" hidden />
+        </label>
+        <button id="resetBtn">Reset local</button>
+      </div>
+
+      <p class="hint">Mẹo: sửa key xong bấm “Lưu Teil”. Dữ liệu lưu trong trình duyệt của bạn.</p>
+    </aside>
+
+    <section class="main">
+      <div class="card headerCard">
+        <div>
+          <h2 id="activeTitle">PETRA</h2>
+          <p id="pageHint">PDF page: 1</p>
+        </div>
+        <div class="progressWrap">
+          <span id="progressText">0%</span>
+          <div class="progress"><div id="progressBar"></div></div>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab active" data-tab="pdfPanel">Đọc đề PDF</button>
+        <button class="tab" data-tab="keyPanel">Answer Key</button>
+        <button class="tab" data-tab="checkPanel">Check đáp án</button>
+        <button class="tab" data-tab="notePanel">Ghi chú</button>
+      </div>
+
+      <section id="pdfPanel" class="panel">
+        <div class="card">
+          <div class="pdfControls">
+            <button id="openPdfBtn">Mở PDF ở trang bộ đề</button>
+            <label>Đi tới trang: <input id="pageInput" type="number" min="1" value="1"></label>
+            <button id="goPageBtn">Go</button>
+          </div>
+          <iframe id="pdfFrame" title="TELC PDF"></iframe>
+        </div>
+      </section>
+
+      <section id="keyPanel" class="panel hidden"></section>
+
+      <section id="checkPanel" class="panel hidden">
+        <div class="card">
+          <h3>Check nhanh</h3>
+          <p>Nhập đáp án của bạn. Ví dụ: <b>1A 2B 3C</b> hoặc <b>41+ 42-</b></p>
+          <textarea id="userAnswer" placeholder="Nhập đáp án của bạn..."></textarea>
+          <button id="checkBtn">Check</button>
+          <div id="checkResult"></div>
+        </div>
+      </section>
+
+      <section id="notePanel" class="panel hidden">
+        <div class="card">
+          <h3>Ghi chú chung</h3>
+          <textarea id="globalNotes" placeholder="Ghi từ vựng, lỗi sai, mẹo làm bài..."></textarea>
+          <button id="saveNotesBtn">Lưu ghi chú</button>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
