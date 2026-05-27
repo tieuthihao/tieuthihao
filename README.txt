@@ -1,8 +1,19 @@
-TELC B1 Master - Nhật Phong x GPT
+TELC B1 FINAL DATA APP - Nhật Phong x GPT
+
+Cấu trúc:
+- index.html: giao diện chính
+- style.css: giao diện/dark mode/responsive
+- script.js: chức năng app
+- data.js: dữ liệu bộ đề + answer key + notes
 
 Cách dùng:
-1. Mở index.html để học offline, hoặc upload cả thư mục lên GitHub Pages.
-2. Chọn bộ đề ở bên trái, chọn từng phần Lesen / Hören.
-3. Nhập đáp án của bạn, bấm Hiện đáp án để xem key đã lưu.
-4. Vì PDF gốc không có answer key dạng text rõ ràng, web có chức năng tự nhập key: dán vào ô ghi chú dạng "1B 2D 3C" hoặc "41+ 42-", rồi bấm Lưu key từ ghi chú.
-5. Tiến độ và đáp án được lưu trong trình duyệt bằng localStorage.
+1. Giải nén ZIP
+2. Mở index.html
+3. Chọn bộ đề
+4. Bấm 'Hiện đáp án'
+5. Sửa Answer Key rồi bấm 'Lưu Teil'
+
+Lưu ý:
+- Dữ liệu bạn sửa được lưu trong localStorage của trình duyệt.
+- Có thể Export JSON để backup.
+- Có thể Import JSON để khôi phục.

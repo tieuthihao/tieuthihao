@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nhật Phong x GPT - TELC B1 Master</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Nhật Phong x GPT</h1>
+      <p>TELC B1 Master App — Lesen / Hören / Sprachbausteine</p>
+    </div>
+    <button id="themeBtn">🌙 Dark</button>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <h2>Bộ đề</h2>
+      <input id="searchInput" placeholder="Tìm bộ đề..." />
+      <div id="setList"></div>
+
+      <div class="tools">
+        <button id="exportBtn">Export JSON</button>
+        <label class="importLabel">
+          Import JSON
+          <input id="importInput" type="file" accept=".json" hidden />
+        </label>
+        <button id="resetBtn">Reset local</button>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div class="card hero">
+        <div>
+          <h2 id="activeTitle">Chọn một bộ đề</h2>
+          <p id="activeMeta">Answer Key có thể sửa và lưu trên máy/iPad.</p>
+        </div>
+        <div class="progressBox">
+          <span id="progressText">0%</span>
+          <div class="progress"><div id="progressBar"></div></div>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <button data-tab="study" class="tab active">Học đáp án</button>
+        <button data-tab="test" class="tab">Thi thử</button>
+        <button data-tab="notes" class="tab">Ghi chú</button>
+      </div>
+
+      <section id="studyPanel" class="panel"></section>
+
+      <section id="testPanel" class="panel hidden">
+        <div class="card">
+          <h3>Check nhanh</h3>
+          <p>Nhập đáp án của bạn dạng: <b>1A 2B 3C</b> hoặc <b>41+ 42-</b></p>
+          <textarea id="userAnswer" placeholder="Nhập đáp án của bạn..."></textarea>
+          <button id="checkBtn">Check đúng/sai</button>
+          <div id="checkResult"></div>
+        </div>
+      </section>
+
+      <section id="notesPanel" class="panel hidden">
+        <div class="card">
+          <h3>Ghi chú chung</h3>
+          <textarea id="globalNotes" placeholder="Ghi mẹo, lỗi hay sai, từ vựng..."></textarea>
+          <button id="saveNotesBtn">Lưu ghi chú</button>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
