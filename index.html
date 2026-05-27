@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TELC B1 — Answer Key</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & TOKENS ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:       #0a0d12;
+  --surface:  #111620;
+  --surface2: #181e2b;
+  --border:   #1e2736;
+  --border2:  #2a3547;
+  --text:     #e8edf5;
+  --muted:    #5e6e88;
+  --muted2:   #8896aa;
+  --accent:   #3be8a0;
+  --accent2:  #0d9960;
+  --warn:     #f59e0b;
+  --bad:      #f05050;
+  --blue:     #4f9cf9;
+  --radius:   14px;
+  --radius-sm: 8px;
+  --font-head: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+body.light {
+  --bg:       #f0f3f8;
+  --surface:  #ffffff;
+  --surface2: #f7f9fc;
+  --border:   #dce3ed;
+  --border2:  #c8d3e0;
+  --text:     #0f1623;
+  --muted:    #8896aa;
+  --muted2:   #6174899;
+  --accent:   #059669;
+  --accent2:  #047857;
+  --bad:      #dc2626;
+  --blue:     #2563eb;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 99px; }
+
+/* ===== LAYOUT ===== */
+.shell {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: 52px 1fr;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ===== TOPBAR ===== */
+.topbar {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  z-index: 10;
+}
+.topbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-mark {
+  width: 28px; height: 28px;
+  background: var(--accent);
+  border-radius: 7px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 13px;
+  color: #000;
+  flex-shrink: 0;
+}
+.brand-name {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+}
+.brand-sub {
+  font-size: 11px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  letter-spacing: 0.5px;
+}
+.topbar-actions { display: flex; gap: 8px; align-items: center; }
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.sidebar-top { padding: 14px 14px 8px; }
+.search-wrap {
+  position: relative;
+}
+.search-wrap svg {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  pointer-events: none;
+}
+#searchInput {
+  width: 100%;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px 8px 32px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  outline: none;
+  transition: border-color .2s;
+}
+#searchInput:focus { border-color: var(--accent); }
+#searchInput::placeholder { color: var(--muted); }
+
+.set-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 6px 8px 8px;
+}
+.set-btn {
+  width: 100%;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  transition: background .15s, border-color .15s;
+  font-family: var(--font-body);
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+.set-btn:hover { background: var(--surface2); border-color: var(--border); }
+.set-btn.active {
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 35%, transparent);
+  color: var(--accent);
+}
+.set-btn .set-name { font-weight: 500; flex: 1; }
+.set-pct {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+.set-btn.active .set-pct { color: var(--accent2); }
+.pct-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--border2);
+  flex-shrink: 0;
+}
+.set-btn.active .pct-dot { background: var(--accent); }
+
+.sidebar-foot {
+  padding: 10px 10px 12px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* ===== MAIN ===== */
+.main {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+/* ===== SET HEADER ===== */
+.set-header {
+  padding: 14px 20px 12px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-shrink: 0;
+}
+.set-title-block {}
+.set-title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+.set-page-hint {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.progress-block { display: flex; flex-direction: column; align-items: flex-end; gap: 5px; min-width: 160px; }
+.progress-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.pct-big { font-size: 16px; font-weight: 600; color: var(--accent); font-family: var(--font-head); }
+.progress-track {
+  width: 100%;
+  height: 5px;
+  background: var(--surface2);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 99px;
+  transition: width .4s cubic-bezier(0.4,0,0.2,1);
+  width: 0;
+}
+
+/* ===== TABS ===== */
+.tab-bar {
+  display: flex;
+  gap: 0;
+  padding: 0 20px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.tab-btn {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  padding: 10px 16px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: color .15s, border-color .15s;
+  white-space: nowrap;
+}
+.tab-btn:hover { color: var(--text); }
+.tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ===== PANEL SCROLL ===== */
+.panels { flex: 1; overflow-y: auto; }
+.panel { display: none; padding: 18px 20px 24px; }
+.panel.active { display: block; }
+
+/* ===== PDF TAB ===== */
+.pdf-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+.pdf-hint {
+  font-size: 12px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+}
+#pdfFrame {
+  width: 100%;
+  height: calc(100vh - 280px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: white;
+  display: block;
+}
+
+/* ===== KEY TAB ===== */
+.sections-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.section-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color .2s;
+}
+.section-card:hover { border-color: var(--border2); }
+.section-card.has-data { border-color: color-mix(in srgb, var(--accent) 30%, transparent); }
+
+.sec-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  cursor: pointer;
+  user-select: none;
+  gap: 10px;
+}
+.sec-head:hover { background: var(--surface2); }
+.sec-left { display: flex; align-items: center; gap: 10px; }
+.sec-icon {
+  width: 28px; height: 28px;
+  border-radius: 7px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--muted);
+  flex-shrink: 0;
+}
+.section-card.has-data .sec-icon {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 30%, transparent);
+  color: var(--accent);
+}
+.sec-name { font-weight: 500; font-size: 13.5px; }
+.sec-range {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  background: var(--surface2);
+  padding: 2px 7px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+.sec-preview {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted2);
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.sec-right { display: flex; align-items: center; gap: 8px; }
+.chevron {
+  color: var(--muted);
+  transition: transform .2s;
+  flex-shrink: 0;
+}
+.section-card.open .chevron { transform: rotate(180deg); }
+
+.sec-body {
+  display: none;
+  padding: 0 14px 14px;
+  border-top: 1px solid var(--border);
+}
+.section-card.open .sec-body { display: block; }
+
+.field-label {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 12px 0 5px;
+}
+.key-input, .note-input {
+  width: 100%;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  padding: 9px 12px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  outline: none;
+  transition: border-color .2s;
+  resize: vertical;
+}
+.note-input { font-family: var(--font-body); font-size: 13px; min-height: 60px; }
+.key-input:focus, .note-input:focus { border-color: var(--accent); }
+.key-input::placeholder, .note-input::placeholder { color: var(--muted); }
+
+.sec-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* ===== PASTE TAB ===== */
+.paste-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  max-width: 700px;
+}
+.paste-card h3 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+.format-hint {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted2);
+  margin: 10px 0;
+  line-height: 1.8;
+}
+.big-textarea {
+  width: 100%;
+  min-height: 200px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  outline: none;
+  resize: vertical;
+  margin: 8px 0 12px;
+  transition: border-color .2s;
+  line-height: 1.7;
+}
+.big-textarea:focus { border-color: var(--accent); }
+
+/* ===== CHECK TAB ===== */
+.check-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  max-width: 700px;
+}
+.check-card h3 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+.check-help {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+#checkResult {
+  margin-top: 14px;
+  line-height: 2.2;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+.good { color: var(--accent); font-weight: 600; }
+.wrong { color: var(--bad); font-weight: 600; }
+.check-summary {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: var(--surface2);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--muted2);
+  font-family: var(--font-mono);
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 13px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  color: var(--text);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background .15s, border-color .15s, color .15s;
+  white-space: nowrap;
+  line-height: 1;
+}
+.btn:hover { background: var(--border); }
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #000;
+  font-weight: 600;
+}
+.btn-primary:hover { background: color-mix(in srgb, var(--accent) 85%, white); border-color: var(--accent); }
+.btn-danger { color: var(--bad); }
+.btn-danger:hover { background: color-mix(in srgb, var(--bad) 12%, transparent); border-color: var(--bad); }
+.btn-sm { padding: 5px 10px; font-size: 12px; }
+.btn-full { width: 100%; justify-content: center; }
+
+/* ===== TOAST ===== */
+#toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius);
+  padding: 10px 16px;
+  font-size: 13px;
+  font-family: var(--font-mono);
+  color: var(--accent);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .25s, transform .25s;
+  z-index: 999;
+  max-width: 260px;
+}
+#toast.show { opacity: 1; transform: translateY(0); }
+#toast.error { color: var(--bad); }
+
+/* ===== DIVIDER ===== */
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 4px 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 860px) {
+  .shell { grid-template-columns: 1fr; grid-template-rows: 52px auto 1fr; height: auto; overflow: visible; }
+  .sidebar { border-right: none; border-bottom: 1px solid var(--border); height: auto; max-height: 240px; }
+  .main { overflow: visible; }
+  .panels { overflow: visible; }
+  #pdfFrame { height: 70vh; }
+  .brand-sub { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="topbar-brand">
+      <div class="logo-mark">B1</div>
+      <div>
+        <div class="brand-name">TELC B1 Key</div>
+        <div class="brand-sub">PDF + Answer Key Manager</div>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <button class="btn btn-sm" id="themeBtn">☀ / ☾</button>
+    </div>
+  </header>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <div class="search-wrap">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input id="searchInput" placeholder="Tìm bộ đề...">
+      </div>
+    </div>
+    <div class="set-list" id="setList"></div>
+    <div class="sidebar-foot">
+      <button class="btn btn-sm btn-full" id="exportJson">↑ Export JSON</button>
+      <label class="btn btn-sm btn-full" style="justify-content:center;cursor:pointer;">↓ Import JSON<input id="importJson" type="file" accept=".json" hidden></label>
+      <button class="btn btn-sm btn-full" id="exportTxt">↑ Export TXT</button>
+      <div class="divider"></div>
+      <a class="btn btn-sm btn-full" href="answer_key_full_input.txt" download>↓ Template TXT</a>
+      <a class="btn btn-sm btn-full" href="pdf24_converted.pdf" target="_blank">⎋ Mở PDF tab mới</a>
+      <div class="divider"></div>
+      <button class="btn btn-sm btn-full btn-danger" id="resetBtn">✕ Reset dữ liệu</button>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main">
+    <!-- SET HEADER -->
+    <div class="set-header">
+      <div class="set-title-block">
+        <div class="set-title" id="activeTitle">PETRA</div>
+        <div class="set-page-hint" id="pageHint">PDF trang ~1</div>
+      </div>
+      <div class="progress-block">
+        <div class="progress-label">
+          Hoàn thành
+          <span class="pct-big" id="progressText">0%</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progressBar"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TABS -->
+    <div class="tab-bar">
+      <button class="tab-btn active" data-tab="pdfTab">Đọc PDF</button>
+      <button class="tab-btn" data-tab="keyTab">Answer Key</button>
+      <button class="tab-btn" data-tab="pasteTab">Dán hàng loạt</button>
+      <button class="tab-btn" data-tab="checkTab">Chấm điểm</button>
+    </div>
+
+    <!-- PANELS -->
+    <div class="panels">
+
+      <!-- PDF -->
+      <div class="panel active" id="pdfTab">
+        <div class="pdf-controls">
+          <button class="btn btn-primary btn-sm" id="jumpPageBtn">→ Nhảy tới trang bộ này</button>
+          <span class="pdf-hint">Cuộn/vuốt để xem toàn bộ đề trong khung dưới</span>
+        </div>
+        <iframe id="pdfFrame" src="pdf24_converted.pdf" title="TELC B1 PDF"></iframe>
+      </div>
+
+      <!-- ANSWER KEY -->
+      <div class="panel" id="keyTab">
+        <div class="sections-grid" id="sectionsGrid"></div>
+      </div>
+
+      <!-- PASTE BULK -->
+      <div class="panel" id="pasteTab">
+        <div class="paste-card">
+          <h3>Dán key hàng loạt</h3>
+          <p style="font-size:12px;color:var(--muted);margin:4px 0 8px;">Dán nhiều dòng cùng lúc, mỗi dòng một Teil.</p>
+          <div class="format-hint">
+            PETRA | Lesen Teil 1 (1-5) = 1B 2A 3C 4D 5B<br>
+            PETRA | Hören Teil 2 (46-55) = richtig falsch richtig ...<br>
+            EVA | Sprachbausteine Teil 1 (21-30) = A B C D ...
+          </div>
+          <textarea class="big-textarea" id="bulkInput" placeholder="Dán answer key ở đây..."></textarea>
+          <button class="btn btn-primary" id="applyBulk">↓ Import từ text</button>
+        </div>
+      </div>
+
+      <!-- CHECK -->
+      <div class="panel" id="checkTab">
+        <div class="check-card">
+          <h3>Chấm điểm nhanh</h3>
+          <p class="check-help">Nhập đáp án của bạn (VD: <span style="font-family:var(--font-mono)">1B 2A 3D ...</span>), so với key đã lưu của bộ đề đang chọn.</p>
+          <textarea class="big-textarea" id="userAns" placeholder="Nhập đáp án của bạn..."></textarea>
+          <button class="btn btn-primary" id="checkBtn">Chấm →</button>
+          <div id="checkResult"></div>
+        </div>
+      </div>
+
+    </div><!-- /panels -->
+  </div><!-- /main -->
+</div><!-- /shell -->
+
+<div id="toast"></div>
+
+<script src="data.js"></script>
+<script>
+/* ===== STATE ===== */
+let DB = structuredClone(EXAM_DATA);
+let current = Object.keys(DB)[0];
+
+/* ===== LOCAL STORAGE ===== */
+function loadLocal() {
+  const raw = localStorage.getItem("telc_b1_keys_v2");
+  if (raw) { try { DB = JSON.parse(raw); } catch(e) {} }
+}
+function saveLocal() {
+  localStorage.setItem("telc_b1_keys_v2", JSON.stringify(DB));
+}
+
+/* ===== TOAST ===== */
+let toastTimer;
+function toast(msg, isErr = false) {
+  const el = document.getElementById("toast");
+  el.textContent = msg;
+  el.className = "show" + (isErr ? " error" : "");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { el.className = ""; }, 2200);
+}
+
+/* ===== PROGRESS ===== */
+function progress(name) {
+  const vals = Object.values(DB[name].sections);
+  const filled = vals.filter(v => (v.answers || "").trim()).length;
+  return Math.round(filled / vals.length * 100);
+}
+
+/* ===== RENDER SIDEBAR ===== */
+function renderSets() {
+  const q = document.getElementById("searchInput").value.toLowerCase();
+  const list = document.getElementById("setList");
+  list.innerHTML = "";
+  Object.keys(DB).filter(n => n.toLowerCase().includes(q)).forEach(n => {
+    const pct = progress(n);
+    const b = document.createElement("button");
+    b.className = "set-btn" + (n === current ? " active" : "");
+    b.innerHTML = `<span class="pct-dot"></span><span class="set-name">${n}</span><span class="set-pct">${pct}%</span>`;
+    b.onclick = () => { current = n; renderAll(); };
+    list.appendChild(b);
+  });
+}
+
+/* ===== RENDER HEADER ===== */
+function renderHeader() {
+  document.getElementById("activeTitle").textContent = current;
+  document.getElementById("pageHint").textContent = `PDF trang ~${DB[current].startPage}`;
+  const p = progress(current);
+  document.getElementById("progressText").textContent = p + "%";
+  document.getElementById("progressBar").style.width = p + "%";
+}
+
+/* ===== RENDER KEY SECTIONS ===== */
+function renderKeys() {
+  const grid = document.getElementById("sectionsGrid");
+  grid.innerHTML = "";
+
+  const iconMap = { "Lesen": "Ls", "Sprach": "Sp", "Hören": "Hr" };
+
+  Object.entries(DB[current].sections).forEach(([sec, info]) => {
+    const iconKey = Object.keys(iconMap).find(k => sec.startsWith(k));
+    const icon = iconKey ? iconMap[iconKey] : "??";
+    const hasData = !!(info.answers || "").trim();
+
+    const card = document.createElement("div");
+    card.className = "section-card" + (hasData ? " has-data" : "");
+
+    const preview = hasData
+      ? (info.answers.length > 30 ? info.answers.slice(0, 30) + "…" : info.answers)
+      : "";
+
+    card.innerHTML = `
+      <div class="sec-head">
+        <div class="sec-left">
+          <div class="sec-icon">${icon}</div>
+          <div>
+            <div class="sec-name">${sec}</div>
+            ${preview ? `<div class="sec-preview">${preview}</div>` : ""}
+          </div>
+        </div>
+        <div class="sec-right">
+          <span class="sec-range">câu ${info.range}</span>
+          <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="sec-body">
+        <div class="field-label">Answer Key</div>
+        <input type="text" class="key-input" value="${(info.answers||"").replace(/"/g,"&quot;")}" placeholder="VD: 1B 2A 3C 4D 5B hoặc richtig falsch...">
+        <div class="field-label">Ghi chú</div>
+        <textarea class="note-input" placeholder="Ghi chú (tuỳ chọn)...">${info.notes||""}</textarea>
+        <div class="sec-actions">
+          <button class="btn btn-primary btn-sm save-btn">Lưu</button>
+          <button class="btn btn-sm copy-btn">Sao chép</button>
+          <button class="btn btn-sm btn-danger clear-btn">Xóa</button>
+        </div>
+      </div>`;
+
+    const head = card.querySelector(".sec-head");
+    const body = card.querySelector(".sec-body");
+    const keyInput = card.querySelector(".key-input");
+    const noteInput = card.querySelector(".note-input");
+
+    head.addEventListener("click", () => {
+      card.classList.toggle("open");
+    });
+
+    card.querySelector(".save-btn").addEventListener("click", (e) => {
+      e.stopPropagation();
+      info.answers = keyInput.value.trim();
+      info.notes = noteInput.value;
+      saveLocal();
+      // update card state without full re-render
+      card.classList.toggle("has-data", !!info.answers);
+      renderHeader();
+      renderSets();
+      toast("✓ Đã lưu " + sec);
+    });
+
+    card.querySelector(".copy-btn").addEventListener("click", (e) => {
+      e.stopPropagation();
+      navigator.clipboard.writeText(keyInput.value).then(() => toast("Đã copy!"));
+    });
+
+    card.querySelector(".clear-btn").addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (!confirm("Xóa key của " + sec + "?")) return;
+      info.answers = "";
+      keyInput.value = "";
+      saveLocal();
+      card.classList.remove("has-data");
+      renderHeader();
+      renderSets();
+      toast("Đã xóa " + sec);
+    });
+
+    // Enter to save in key input
+    keyInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        card.querySelector(".save-btn").click();
+      }
+    });
+
+    grid.appendChild(card);
+  });
+}
+
+/* ===== PDF ===== */
+function setPDF(jump = false) {
+  const pdf = DB[current].pdf || "pdf24_converted.pdf";
+  document.getElementById("pdfFrame").src = jump
+    ? `${pdf}#page=${DB[current].startPage}`
+    : pdf;
+}
+
+/* ===== CHECK (FIXED) ===== */
+function normalize(s) {
+  return (s || "").toUpperCase().replace(/[;,\n\r]/g, " ").replace(/\s+/g, " ").trim();
+}
+function officialAnswers() {
+  // collect all answers for current set as array of tokens
+  return normalize(
+    Object.values(DB[current].sections).map(x => x.answers).join(" ")
+  ).split(" ").filter(Boolean);
+}
+function check() {
+  const official = officialAnswers();
+  const userRaw = normalize(document.getElementById("userAns").value);
+  const userTokens = userRaw.split(" ").filter(Boolean);
+
+  if (!official.length) {
+    document.getElementById("checkResult").innerHTML =
+      '<span style="color:var(--muted)">Bộ đề này chưa có answer key.</span>';
+    return;
+  }
+  if (!userTokens.length) {
+    document.getElementById("checkResult").innerHTML =
+      '<span style="color:var(--muted)">Chưa nhập đáp án.</span>';
+    return;
+  }
+
+  let correct = 0, wrong = 0;
+  const html = userTokens.map((tok, i) => {
+    const ref = official[i];
+    if (!ref) return `<span style="color:var(--muted)">${tok}?</span>`;
+    if (tok === ref) { correct++; return `<span class="good">${tok}✓</span>`; }
+    wrong++;
+    return `<span class="wrong">${tok}✗<sup style="font-size:9px">${ref}</sup></span>`;
+  }).join(" ");
+
+  const total = correct + wrong;
+  const pct = total ? Math.round(correct / total * 100) : 0;
+
+  document.getElementById("checkResult").innerHTML = html +
+    `<div class="check-summary">${correct}/${total} đúng — ${pct}% · ${wrong} sai</div>`;
+}
+
+/* ===== BULK IMPORT ===== */
+function parseBulk() {
+  const lines = document.getElementById("bulkInput").value.split(/\n/);
+  let count = 0;
+  lines.forEach(line => {
+    const m = line.match(/^(.+?)\s*\|\s*(.+?)(?:\s*\([^)]*\))?\s*=\s*(.*)$/);
+    if (!m) return;
+    const setName = m[1].trim().toUpperCase();
+    const sec = m[2].trim();
+    const ans = m[3].trim();
+    const key = Object.keys(DB).find(k => k.toUpperCase() === setName);
+    if (key && DB[key].sections[sec]) {
+      DB[key].sections[sec].answers = ans;
+      count++;
+    }
+  });
+  saveLocal();
+  renderAll();
+  toast(`✓ Imported ${count} dòng`);
+}
+
+/* ===== EXPORT TXT ===== */
+function exportText() {
+  const lines = [];
+  Object.entries(DB).forEach(([name, obj]) => {
+    lines.push("===== " + name + " =====");
+    Object.entries(obj.sections).forEach(([sec, info]) => {
+      lines.push(`${name} | ${sec} (${info.range}) = ${info.answers || ""}`);
+    });
+    lines.push("");
+  });
+  const blob = new Blob([lines.join("\n")], { type: "text/plain;charset=utf-8" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "telc_answer_keys_export.txt";
+  a.click();
+  toast("✓ Đã export TXT");
+}
+
+/* ===== RENDER ALL ===== */
+function renderAll() {
+  renderHeader();
+  renderSets();
+  renderKeys();
+}
+
+/* ===== TABS ===== */
+document.querySelectorAll(".tab-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".panel").forEach(p => p.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById(btn.dataset.tab).classList.add("active");
+  });
+});
+
+/* ===== BINDINGS ===== */
+document.getElementById("searchInput").addEventListener("input", renderSets);
+document.getElementById("themeBtn").addEventListener("click", () => {
+  document.body.classList.toggle("light");
+});
+document.getElementById("jumpPageBtn").addEventListener("click", () => {
+  setPDF(true);
+  // switch to PDF tab
+  document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+  document.querySelectorAll(".panel").forEach(p => p.classList.remove("active"));
+  document.querySelector('[data-tab="pdfTab"]').classList.add("active");
+  document.getElementById("pdfTab").classList.add("active");
+});
+document.getElementById("checkBtn").addEventListener("click", check);
+document.getElementById("applyBulk").addEventListener("click", parseBulk);
+document.getElementById("exportTxt").addEventListener("click", exportText);
+document.getElementById("exportJson").addEventListener("click", () => {
+  const blob = new Blob([JSON.stringify(DB, null, 2)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "telc_answer_keys.json";
+  a.click();
+  toast("✓ Đã export JSON");
+});
+document.getElementById("importJson").addEventListener("change", e => {
+  const f = e.target.files[0]; if (!f) return;
+  const r = new FileReader();
+  r.onload = () => {
+    try {
+      DB = JSON.parse(r.result);
+      saveLocal(); renderAll();
+      toast("✓ Import JSON thành công");
+    } catch(err) { toast("⚠ File JSON lỗi", true); }
+  };
+  r.readAsText(f);
+  e.target.value = "";
+});
+document.getElementById("resetBtn").addEventListener("click", () => {
+  if (confirm("Reset toàn bộ key đã nhập?")) {
+    localStorage.removeItem("telc_b1_keys_v2");
+    DB = structuredClone(EXAM_DATA);
+    renderAll();
+    toast("✓ Đã reset");
+  }
+});
+
+/* ===== INIT ===== */
+loadLocal();
+setPDF(false);
+renderAll();
+</script>
+</body>
+</html>

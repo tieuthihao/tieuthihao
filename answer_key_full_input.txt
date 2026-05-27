@@ -1,0 +1,184 @@
+TELC B1 - FULL ANSWER KEY INPUT SHEET
+Cách nhập: điền sau dấu =
+Ví dụ: PETRA | Lesen Teil 1 = 1B 2D 3C 4A 5G
+Ví dụ Hören: PETRA | Hören Teil 1 = 41+ 42- 43+ 44- 45+
+
+===== PETRA | PDF page khoảng 1 =====
+PETRA | Lesen Teil 1 (1-5) = 
+PETRA | Lesen Teil 2 (6-10) = 
+PETRA | Lesen Teil 3 (11-20) = 
+PETRA | Sprachbausteine Teil 1 (21-30) = 
+PETRA | Sprachbausteine Teil 2 (31-40) = 
+PETRA | Hören Teil 1 (41-45) = 
+PETRA | Hören Teil 2 (46-55) = 
+PETRA | Hören Teil 3 (56-60) = 
+
+===== EVA | PDF page khoảng 13 =====
+EVA | Lesen Teil 1 (1-5) = 
+EVA | Lesen Teil 2 (6-10) = 
+EVA | Lesen Teil 3 (11-20) = 
+EVA | Sprachbausteine Teil 1 (21-30) = 
+EVA | Sprachbausteine Teil 2 (31-40) = 
+EVA | Hören Teil 1 (41-45) = 
+EVA | Hören Teil 2 (46-55) = 
+EVA | Hören Teil 3 (56-60) = 
+
+===== SOPHIE | PDF page khoảng 25 =====
+SOPHIE | Lesen Teil 1 (1-5) = 
+SOPHIE | Lesen Teil 2 (6-10) = 
+SOPHIE | Lesen Teil 3 (11-20) = 
+SOPHIE | Sprachbausteine Teil 1 (21-30) = 
+SOPHIE | Sprachbausteine Teil 2 (31-40) = 
+SOPHIE | Hören Teil 1 (41-45) = 
+SOPHIE | Hören Teil 2 (46-55) = 
+SOPHIE | Hören Teil 3 (56-60) = 
+
+===== NADJA | PDF page khoảng 38 =====
+NADJA | Lesen Teil 1 (1-5) = 
+NADJA | Lesen Teil 2 (6-10) = 
+NADJA | Lesen Teil 3 (11-20) = 
+NADJA | Sprachbausteine Teil 1 (21-30) = 
+NADJA | Sprachbausteine Teil 2 (31-40) = 
+NADJA | Hören Teil 1 (41-45) = 
+NADJA | Hören Teil 2 (46-55) = 
+NADJA | Hören Teil 3 (56-60) = 
+
+===== NICOLE | PDF page khoảng 50 =====
+NICOLE | Lesen Teil 1 (1-5) = 
+NICOLE | Lesen Teil 2 (6-10) = 
+NICOLE | Lesen Teil 3 (11-20) = 
+NICOLE | Sprachbausteine Teil 1 (21-30) = 
+NICOLE | Sprachbausteine Teil 2 (31-40) = 
+NICOLE | Hören Teil 1 (41-45) = 
+NICOLE | Hören Teil 2 (46-55) = 
+NICOLE | Hören Teil 3 (56-60) = 
+
+===== ANDREAS | PDF page khoảng 62 =====
+ANDREAS | Lesen Teil 1 (1-5) = 
+ANDREAS | Lesen Teil 2 (6-10) = 
+ANDREAS | Lesen Teil 3 (11-20) = 
+ANDREAS | Sprachbausteine Teil 1 (21-30) = 
+ANDREAS | Sprachbausteine Teil 2 (31-40) = 
+ANDREAS | Hören Teil 1 (41-45) = 
+ANDREAS | Hören Teil 2 (46-55) = 
+ANDREAS | Hören Teil 3 (56-60) = 
+
+===== ANNIKA | PDF page khoảng 75 =====
+ANNIKA | Lesen Teil 1 (1-5) = 
+ANNIKA | Lesen Teil 2 (6-10) = 
+ANNIKA | Lesen Teil 3 (11-20) = 
+ANNIKA | Sprachbausteine Teil 1 (21-30) = 
+ANNIKA | Sprachbausteine Teil 2 (31-40) = 
+ANNIKA | Hören Teil 1 (41-45) = 
+ANNIKA | Hören Teil 2 (46-55) = 
+ANNIKA | Hören Teil 3 (56-60) = 
+
+===== IRIS | PDF page khoảng 87 =====
+IRIS | Lesen Teil 1 (1-5) = 
+IRIS | Lesen Teil 2 (6-10) = 
+IRIS | Lesen Teil 3 (11-20) = 
+IRIS | Sprachbausteine Teil 1 (21-30) = 
+IRIS | Sprachbausteine Teil 2 (31-40) = 
+IRIS | Hören Teil 1 (41-45) = 
+IRIS | Hören Teil 2 (46-55) = 
+IRIS | Hören Teil 3 (56-60) = 
+
+===== SONJA | PDF page khoảng 99 =====
+SONJA | Lesen Teil 1 (1-5) = 
+SONJA | Lesen Teil 2 (6-10) = 
+SONJA | Lesen Teil 3 (11-20) = 
+SONJA | Sprachbausteine Teil 1 (21-30) = 
+SONJA | Sprachbausteine Teil 2 (31-40) = 
+SONJA | Hören Teil 1 (41-45) = 
+SONJA | Hören Teil 2 (46-55) = 
+SONJA | Hören Teil 3 (56-60) = 
+
+===== CAROLINA | PDF page khoảng 111 =====
+CAROLINA | Lesen Teil 1 (1-5) = 
+CAROLINA | Lesen Teil 2 (6-10) = 
+CAROLINA | Lesen Teil 3 (11-20) = 
+CAROLINA | Sprachbausteine Teil 1 (21-30) = 
+CAROLINA | Sprachbausteine Teil 2 (31-40) = 
+CAROLINA | Hören Teil 1 (41-45) = 
+CAROLINA | Hören Teil 2 (46-55) = 
+CAROLINA | Hören Teil 3 (56-60) = 
+
+===== VERA | PDF page khoảng 123 =====
+VERA | Lesen Teil 1 (1-5) = 
+VERA | Lesen Teil 2 (6-10) = 
+VERA | Lesen Teil 3 (11-20) = 
+VERA | Sprachbausteine Teil 1 (21-30) = 
+VERA | Sprachbausteine Teil 2 (31-40) = 
+VERA | Hören Teil 1 (41-45) = 
+VERA | Hören Teil 2 (46-55) = 
+VERA | Hören Teil 3 (56-60) = 
+
+===== JENNIFER | PDF page khoảng 135 =====
+JENNIFER | Lesen Teil 1 (1-5) = 
+JENNIFER | Lesen Teil 2 (6-10) = 
+JENNIFER | Lesen Teil 3 (11-20) = 
+JENNIFER | Sprachbausteine Teil 1 (21-30) = 
+JENNIFER | Sprachbausteine Teil 2 (31-40) = 
+JENNIFER | Hören Teil 1 (41-45) = 
+JENNIFER | Hören Teil 2 (46-55) = 
+JENNIFER | Hören Teil 3 (56-60) = 
+
+===== ANDREAS 2 | PDF page khoảng 147 =====
+ANDREAS 2 | Lesen Teil 1 (1-5) = 
+ANDREAS 2 | Lesen Teil 2 (6-10) = 
+ANDREAS 2 | Lesen Teil 3 (11-20) = 
+ANDREAS 2 | Sprachbausteine Teil 1 (21-30) = 
+ANDREAS 2 | Sprachbausteine Teil 2 (31-40) = 
+ANDREAS 2 | Hören Teil 1 (41-45) = 
+ANDREAS 2 | Hören Teil 2 (46-55) = 
+ANDREAS 2 | Hören Teil 3 (56-60) = 
+
+===== THOMAS | PDF page khoảng 159 =====
+THOMAS | Lesen Teil 1 (1-5) = 
+THOMAS | Lesen Teil 2 (6-10) = 
+THOMAS | Lesen Teil 3 (11-20) = 
+THOMAS | Sprachbausteine Teil 1 (21-30) = 
+THOMAS | Sprachbausteine Teil 2 (31-40) = 
+THOMAS | Hören Teil 1 (41-45) = 
+THOMAS | Hören Teil 2 (46-55) = 
+THOMAS | Hören Teil 3 (56-60) = 
+
+===== TAMARA | PDF page khoảng 171 =====
+TAMARA | Lesen Teil 1 (1-5) = 
+TAMARA | Lesen Teil 2 (6-10) = 
+TAMARA | Lesen Teil 3 (11-20) = 
+TAMARA | Sprachbausteine Teil 1 (21-30) = 
+TAMARA | Sprachbausteine Teil 2 (31-40) = 
+TAMARA | Hören Teil 1 (41-45) = 
+TAMARA | Hören Teil 2 (46-55) = 
+TAMARA | Hören Teil 3 (56-60) = 
+
+===== JAN | PDF page khoảng 178 =====
+JAN | Lesen Teil 1 (1-5) = 
+JAN | Lesen Teil 2 (6-10) = 
+JAN | Lesen Teil 3 (11-20) = 
+JAN | Sprachbausteine Teil 1 (21-30) = 
+JAN | Sprachbausteine Teil 2 (31-40) = 
+JAN | Hören Teil 1 (41-45) = 
+JAN | Hören Teil 2 (46-55) = 
+JAN | Hören Teil 3 (56-60) = 
+
+===== VIKTOR | PDF page khoảng 190 =====
+VIKTOR | Lesen Teil 1 (1-5) = 
+VIKTOR | Lesen Teil 2 (6-10) = 
+VIKTOR | Lesen Teil 3 (11-20) = 
+VIKTOR | Sprachbausteine Teil 1 (21-30) = 
+VIKTOR | Sprachbausteine Teil 2 (31-40) = 
+VIKTOR | Hören Teil 1 (41-45) = 
+VIKTOR | Hören Teil 2 (46-55) = 
+VIKTOR | Hören Teil 3 (56-60) = 
+
+===== RITA | PDF page khoảng 202 =====
+RITA | Lesen Teil 1 (1-5) = 
+RITA | Lesen Teil 2 (6-10) = 
+RITA | Lesen Teil 3 (11-20) = 
+RITA | Sprachbausteine Teil 1 (21-30) = 
+RITA | Sprachbausteine Teil 2 (31-40) = 
+RITA | Hören Teil 1 (41-45) = 
+RITA | Hören Teil 2 (46-55) = 
+RITA | Hören Teil 3 (56-60) = 
